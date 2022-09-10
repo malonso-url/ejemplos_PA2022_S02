@@ -1,4 +1,5 @@
 #pragma once
+#include "GameForm.h";
 
 namespace Project1 {
 
@@ -81,6 +82,7 @@ namespace Project1 {
 			this->btnInciar->TabIndex = 2;
 			this->btnInciar->Text = L"Iniciar";
 			this->btnInciar->UseVisualStyleBackColor = true;
+			this->btnInciar->Click += gcnew System::EventHandler(this, &StartForm::btnInciar_Click);
 			// 
 			// StartForm
 			// 
@@ -97,5 +99,15 @@ namespace Project1 {
 
 		}
 #pragma endregion
+	private: System::Void btnInciar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ palabra = txtPalabra->Text;
+		if (!palabra->Trim()->Equals("")) { //Not empty string
+			GameForm^ nuevoJuego = gcnew GameForm();
+			nuevoJuego->ShowDialog();
+		}
+		else { //Empty string
+			MessageBox::Show("Debe ingresar una palabra", "Input incorrecto", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
 	};
 }
