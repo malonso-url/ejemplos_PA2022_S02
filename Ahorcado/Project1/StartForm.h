@@ -34,6 +34,10 @@ namespace Project1 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ label1;
+	protected:
+	private: System::Windows::Forms::TextBox^ txtPalabra;
+	private: System::Windows::Forms::Button^ btnInciar;
 
 	private:
 		/// <summary>
@@ -48,11 +52,49 @@ namespace Project1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"StartForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->txtPalabra = (gcnew System::Windows::Forms::TextBox());
+			this->btnInciar = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(51, 43);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(127, 17);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Ingrese la Palabra:";
+			// 
+			// txtPalabra
+			// 
+			this->txtPalabra->Location = System::Drawing::Point(193, 43);
+			this->txtPalabra->Name = L"txtPalabra";
+			this->txtPalabra->Size = System::Drawing::Size(140, 22);
+			this->txtPalabra->TabIndex = 1;
+			// 
+			// btnInciar
+			// 
+			this->btnInciar->Location = System::Drawing::Point(356, 42);
+			this->btnInciar->Name = L"btnInciar";
+			this->btnInciar->Size = System::Drawing::Size(122, 23);
+			this->btnInciar->TabIndex = 2;
+			this->btnInciar->Text = L"Iniciar";
+			this->btnInciar->UseVisualStyleBackColor = true;
+			// 
+			// StartForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(526, 128);
+			this->Controls->Add(this->btnInciar);
+			this->Controls->Add(this->txtPalabra);
+			this->Controls->Add(this->label1);
+			this->Name = L"StartForm";
+			this->Text = L"Juego del Ahorcado";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
 	};
