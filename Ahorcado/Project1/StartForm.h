@@ -102,7 +102,7 @@ namespace Project1 {
 	private: System::Void btnInciar_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ palabra = txtPalabra->Text;
 		if (!palabra->Trim()->Equals("")) { //Not empty string
-			GameForm^ nuevoJuego = gcnew GameForm();
+			GameForm^ nuevoJuego = gcnew GameForm(palabra);
 			nuevoJuego->ShowDialog();
 		}
 		else { //Empty string
