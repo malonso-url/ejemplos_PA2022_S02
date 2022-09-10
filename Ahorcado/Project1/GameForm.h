@@ -14,9 +14,11 @@ namespace Project1 {
 	/// </summary>
 	public ref class GameForm : public System::Windows::Forms::Form
 	{
+		String^ palabra;
 	public:
-		GameForm(void)
+		GameForm(String^ _palabra)
 		{
+			palabra = _palabra;
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
