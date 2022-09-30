@@ -72,6 +72,7 @@ public:
 	/// <exception cref="System.ArgumentOutOfRangeException">index menor a 0 o index mayor a Count</exception>
 	void Insert(int index, Carta* item);
 
+	
 	/// <summary>
 	/// Obtiene el valor del elemento en la posición indicada de la lista
 	/// </summary>
@@ -79,6 +80,7 @@ public:
 	/// <returns>Elemento en posición indicada</returns>
 	/// <exception cref="System.ArgumentOutOfRangeException">index menor a 0 o index mayor o igual a Count</exception>
 	Carta* GetItem(int index);
+
 
 	/// <summary>
 	/// Cambia el elemento en la posición indicada de la lista
